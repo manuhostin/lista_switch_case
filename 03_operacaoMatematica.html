@@ -8,11 +8,75 @@
     */
 
     //ENTRADA
-
-
+    const n1 = Number(prompt("Informe um número").trim().replace(",","."));
+    const n2 = Number(prompt("Informe outro número").trim().replace(",","."));
+    const operacao = prompt("Informe a operação que deseja realizar utilizando: +(adição), -(subtração), *(multiplicação) e /(divisão)").trim()
     //PROCESSAMENTO
+   
+    let ope;
+    let parIm;
+    let posNeg;
+    let intDec;
+    let mensagem= "";
 
+    switch (operacao) {
+        case "+":
+            ope = n1 + n2;
+            parIm = ope % 2;
+            posNeg = (ope / 1 > 0) ? true : false;
+            intDec = Number.isInteger(ope);
+            mensagem = `O resultado da adição é ${ope}`;
+        break;
+        case "-":
+            ope = n1 - n2;
+            parIm = ope % 2;
+            posNeg = (ope/ 1 > 0) ? true : false;
+            intDec = Number.isInteger(ope);
+            mensagem = `O resultado da subtração é ${ope}`;
+        break;
+        case "*":
+            ope = n1 * n2;
+            parIm = ope % 2;
+            posNeg = (ope/ 1 > 0) ? true : false;
+            intDec = Number.isInteger(ope);
+            mensagem = `O resultado da multiplicação é ${ope}`;
+        break;
+        case "/":
+            ope = n1 / n2;
+            parIm = ope% 2;
+            posNeg = (ope/ 1 > 0) ? true : false;
+            intDec = Number.isInteger(ope);
+            mensagem = `O resultado da divisão é ${ope}`
+        break;
+        default:
+            alert("Valor inválido");
+            break;
+    }
+    switch (parIm) {
+        case 0:
+            mensagem += `, é par,`;
+            break;
+        default:
+            mensagem += `, é impar,`;
+            break;
+    }
+    switch (posNeg) {
+        case true:
+            mensagem += ` é positivo,`;
+            break;
+        default:
+            mensagem += ` é negativo,`;
+            break;
+    }
+    switch (intDec) {
+        case true:
+            mensagem += `é inteiro.`;
+            break;
+        default:
+            mensagem += `é decimal`;
+            break;
+    }
     
     //SAÍDA
-
+    alert (mensagem);
 </script>

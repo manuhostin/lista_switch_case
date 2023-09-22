@@ -11,10 +11,38 @@
     */
 
     //ENTRADA
+    alert(`Se a resposta for sim, digite 1. Se a resposta for não, digite 0`)
+    const ligacao = Number (prompt ("Telefonou para a vítima?"));
+    const local = Number (prompt ("Esteve no local do crime?"));
+    const moradia = Number(prompt ("Mora perto da vítima?"));
+    const dever = Number (prompt ("Devia para a vítima?"));
+    const trabalho =Number (prompt ("Já trabalhou com a vítima?"));
+    const soma = ligacao + local + moradia + dever + trabalho;
 
-    
     //PROCESSAMENTO
-
+    switch (soma) {
+        case 2:
+            alert ("você é suspeito")
+            break;
+    }
+    switch (soma) {
+        case 3:
+        case 4:
+            alert("você é cumplice")
+            break;
+    }
+    switch (soma) {
+        case 5:
+            alert ("ASSASSINO!!")
+            break;
+    
+      }
+    switch (soma) {
+        case 0:
+        case 1:
+            alert ("você é inocente")
+            break;
+    }
 
     //SAÍDA
 

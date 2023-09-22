@@ -1,16 +1,75 @@
-<meta charset="UTF-8">
+"Esteve no local do crime?"<meta charset="UTF-8">
 <script>
     /*
     //PROBLEMA: Faça um script que pergunte para a pessoa em qual hemisfério ela está e qual o mês atual.
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
 
-    //ENTRADA
+   
+        //ENTRADA
+        const hemisfério = prompt("Em qual hemisfério você está?").toUpperCase();
+        const mês = prompt("Em qual mês você está?").toUpperCase();
+        //PROCESSAMENTO
+        switch (hemisfério) {
+            case "NORTE":
+                switch (mês) {
+                    case "JANEIRO":
+                    case "FEVEREIRO":
+                    case "MARÇO":
+                        alert("Inverno");
+                        break;
+                    case "ABRIL":
+                    case "MAIO":
+                    case "JUNHO":
+                        alert("Primavera");
+                        break;
+                    case "JULHO":
+                    case "AGOSTO":
+                    case "SETEMBRO":
+                        alert("Verão");
+                        break;
+                    case "OUTUBRO":
+                    case "NOVEMBRO":
+                    case "DEZEMBRO":
+                        alert("Outono");
+                        break;
+                    default:
+                        alert("Dado inválido!");
+                        break;
+                }
+                break;
 
-    
-    //PROCESSAMENTO
+            case "SUL":
+            switch (mês) {
+                    case "JANEIRO":
+                    case "FEVEREIRO":
+                    case "MARÇO":
+                        alert("Estação: Verão");
+                        break;
+                    case "ABRIL":
+                    case "MAIO":
+                    case "JUNHO":
+                        alert("Outono");
+                        break;
+                    case "JULHO":
+                    case "AGOSTO":
+                    case "SETEMBRO":
+                        alert("Inverno");
+                        break;
+                    case "OUTUBRO":
+                    case "NOVEMBRO":
+                    case "DEZEMBRO":
+                        alert("Primavera");
+                        break;
+                    default:
+                        alert("Dado inválido!");
+                        break;
+        }
 
+        default:
+                alert(`Hemisfério Inválido!`);
+                break;
 
-    //SAÍDA
+    }
 
 </script>

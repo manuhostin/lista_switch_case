@@ -5,11 +5,21 @@
     */
 
     //ENTRADA
-
+    const numero = Number(prompt("Informe um numero").trim().replace(",","."));
+    let mensagem;
     
     //PROCESSAMENTO
-
+    switch (numero % 2) {
+        case 0:
+        mensagem = 'é par'
+        break;
     
+        default:
+        mensagem = 'é par'
+
+            break;
+    }
+    alert(mensagem);
     //SAÍDA
 
 </script>

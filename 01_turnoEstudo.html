@@ -12,10 +12,25 @@
     */
 
     //ENTRADA
-    
-    
+    const turno = prompt('Informe seu turno. M - Matutino, V- Vespertino, N - Noturno').toUpperCase();
+    let mensagem;
     //PROCESSAMENTO
-
+    switch (turno) {
+        case 'M':
+            mensagem = 'Bom dia';
+            break;
+        case 'V' :
+            mensagem = 'Boa tarde';
+        break;
+        case 'N' :
+            mensagem = 'Boa noite';
+            break;
+        default:
+            mensagem = 'turno invalido';
+            break;
+        
+    }
+    alert(mensagem);
     
     //SAÍDA
 
